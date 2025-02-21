@@ -4,36 +4,132 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Quintessential&display=swap" rel="stylesheet">
     <title>M6.2</title>
+    
     
   </head>
   <body>
     <img src="img/top.png" alt="Banner at the top of the page" class="top-banner">
     <img src="img/logo.png" alt="Logo at the top of the page" class="logo">
+    <p class="awesome">Awesome Company</p>
 
+    <nav>
+      <ul><a href="#"> These </a></ul>
+      <ul><a href="#"> are </a></ul>
+      <ul><a href="#"> some </a></ul>
+      <ul><a href="#"> links </a></ul>
+    </nav>
     <h1>Lorem Ipsum</h1>
+    <p class="under-title">A bunch of random text in between the title of the page and the content</p>
 
-    <table>
-      <tr>
-        <th>What is Lorem Ipsum?</th>
-        <td>Latin or something like that</td>
-      </tr>
+    <div class="wrapper">
+      <div>
+        <h2>What is Lorem Ipsum?</h2>
+        <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
+          has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+          took a galley of type and scrambled it to make a type specimen book. It has survived not
+          only five centuries, but also the leap into electronic typesetting, remaining essentially 
+          unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
+          including versions of Lorem Ipsum.</p>
 
-      <tr>
-        <th>Why do we use it?</th>
-        <td>I'm using it to figure out my layout</td>
-      </tr>
+          <h2>Where does it come from?</h2>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+            of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+            a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
+            Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
+            word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
+            sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+            Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
+            popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+            comes from a line in section 1.10.32.
+          </p>
+          <p>
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced 
+            in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+          </p>
+      </div>
 
-      <tr>
-        <th>Where does it come from?</th>
-        <td>Random Text</td>
-      </tr>
+      <div >
+        <h2>Why do we use it?</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a 
+          page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less 
+          normal distribution of letters, as opposed to using 'Content here, content here', making it look 
+          like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum 
+          as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in 
+          their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on 
+          purpose (injected humour and the like).
+        </p>
+      
+        <h2>Where can I get some?</h2>
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
+          alteration in some form, by injected humour, or randomised words which don't look even slightly 
+          believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+          anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet 
+          tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. 
+          It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, 
+          to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free 
+          from repetition, injected humour, or non-characteristic words etc.
+        </p>
+      </div>
+    </div>
 
-      <tr>
-        <th>Where can I get some?</th>
-        <td>Almost anywhere on</td>
-      </tr>
-    </table>
+    <!-- Radio buttons -->
+    <label class="container">One
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    
+    <label class="container">Two
+      <input type="checkbox">
+      <span class="checkmark"></span>
+    </label>
+    
+    <label class="container">Three
+      <input type="checkbox">
+      <span class="checkmark"></span>
+    </label>
+    
+    <label class="container">Four
+      <input type="checkbox">
+      <span class="checkmark"></span>
+    </label>
+
+    <button onclick="showSelectedOption()">Click Me</button>
+
+    <script>
+      function showSelectedOption() {
+        // Collect all checkbox elements
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        let selectedOptions = [];
+        
+        // Loop through the checkboxes to find which ones are checked
+        checkboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+            selectedOptions.push(checkbox.parentElement.innerText); // Get the label text
+          }
+        });
+
+        // Display alert based on selected checkboxes
+        if (selectedOptions.length > 0) {
+          alert('You selected: ' + selectedOptions.join(', '));
+        } else {
+          alert('Please select at least one option.');
+        }
+      }
+    </script>
+    <address>
+      <p>The Awesome Company</p>
+      <p>102-112 Frail Bend Bridge<br>
+      The Dwindlings<br>
+      Little Hornet<br>
+      HX3 9ZQ<br>
+      UK</p>
+    </address>
 
     <img src="img/bottom.png" alt="Banner at the bottom of the page" class="bottom-banner">
 
